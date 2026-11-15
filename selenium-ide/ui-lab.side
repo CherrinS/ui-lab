@@ -1,0 +1,358 @@
+{
+  "id": "8a8c6a52-95ae-45c1-8282-6909d0a97f80",
+  "version": "2.0",
+  "name": "ui-lab",
+  "url": "https://quickpizza.grafana.com",
+  "tests": [{
+    "id": "4a988b14-d68b-45bc-b0ab-94139963ab1a",
+    "name": "web form",
+    "commands": [{
+      "id": "9a37685f-b156-4641-8952-3e0478868f99",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.selenium.dev/selenium/web/web-form.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d45ea6b-bbb2-4504-8e1f-d266a75f407b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x726",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91f2a844-1144-4745-8167-d134f1a1b5d9",
+      "comment": "",
+      "command": "click",
+      "target": "id=my-text-id",
+      "targets": [
+        ["id=my-text-id", "id"],
+        ["name=my-text", "name"],
+        ["css=#my-text-id", "css:finder"],
+        ["xpath=//input[@id='my-text-id']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f15d63d7-5549-4893-bbc0-ee8d91a42666",
+      "comment": "",
+      "command": "type",
+      "target": "id=my-text-id",
+      "targets": [
+        ["id=my-text-id", "id"],
+        ["name=my-text", "name"],
+        ["css=#my-text-id", "css:finder"],
+        ["xpath=//input[@id='my-text-id']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Hello Selenium"
+    }, {
+      "id": "ad5602ff-f4e4-4a85-b984-348621fa845d",
+      "comment": "",
+      "command": "click",
+      "target": "name=my-select",
+      "targets": [
+        ["name=my-select", "name"],
+        ["css=.form-select", "css:finder"],
+        ["xpath=//select[@name='my-select']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff1b407a-eb05-4ba7-8644-21ab2fed7fc4",
+      "comment": "",
+      "command": "select",
+      "target": "name=my-select",
+      "targets": [],
+      "value": "label=Two"
+    }, {
+      "id": "a586b973-ae70-43e0-9fef-1c6215065038",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-select > option:nth-child(3)",
+      "targets": [
+        ["css=.form-select > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='2']", "xpath:attributes"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Two')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b61e36a1-6848-456d-bf0a-0939b56ed46e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d3db1d8-83df-420d-b290-fc2c53ff933f",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=message",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "27c8baf3-2801-4ec4-b0da-30289044e9d2",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Web form - target page",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b19d0e7b-2d88-4170-828d-d526002482f6",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=message",
+      "targets": [],
+      "value": "Received!"
+    }]
+  }, {
+    "id": "76a6daa6-ac96-4723-bdf6-c17f6a8c973d",
+    "name": "QP-01 customer",
+    "commands": [{
+      "id": "c2d500a8-fbae-466f-9e46-42c2d3ae5b3b",
+      "comment": "",
+      "command": "open",
+      "target": "https://quickpizza.grafana.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d3d763e-8092-40d8-a0be-82047d22063a",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=h1",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "8cd6e895-866c-4aa8-a9a3-56e756432502",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=.float-right", "css:finder"],
+        ["xpath=//div[2]", "xpath:position"]
+      ],
+      "value": "Looking to break out of your pizza routine?"
+    }, {
+      "id": "fbc1d6a6-b470-4f2a-8b35-f45a2e52c22c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//label[.//span[normalize-space()='Advanced']]",
+      "targets": [
+        ["css=.w-9", "css:finder"],
+        ["xpath=//label/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "06e8510e-19f9-4963-9492-28c22d0bdabe",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//label[normalize-space()='Max Calories per Slice']/../input",
+      "targets": [
+        ["id=floating_filled", "id"],
+        ["css=.relative:nth-child(1) > #floating_filled", "css:finder"],
+        ["xpath=//input[@id='floating_filled']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "5b3731a0-a78d-4a8e-aadd-016f9e3c0757",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=select",
+      "targets": [
+        ["id=floating_filled", "id"],
+        ["css=.relative:nth-child(1) > #floating_filled", "css:finder"],
+        ["xpath=//input[@id='floating_filled']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "36ed5120-acd5-4f2e-aa04-fb4e615bd02b",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=default-checkbox",
+      "targets": [
+        ["id=floating_filled", "id"],
+        ["css=.relative:nth-child(1) > #floating_filled", "css:finder"],
+        ["xpath=//input[@id='floating_filled']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "ab876a2d-9eb8-4e05-9eaa-e240029ad04f",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=input#pizza-name",
+      "targets": [
+        ["id=floating_filled", "id"],
+        ["css=.relative:nth-child(1) > #floating_filled", "css:finder"],
+        ["xpath=//input[@id='floating_filled']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "1a2c7870-81ca-421c-aa09-42e05430cf32",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const d = new Date(); const two = (n) => String(n).padStart(2, '0'); const day = d.getFullYear() + two(d.getMonth() + 1) + two(d.getDate()); const time = two(d.getHours()) + two(d.getMinutes()) + two(d.getSeconds()); return 'Lab Pizza ' + day + '-' + time;",
+      "targets": [],
+      "value": "pizzaName"
+    }, {
+      "id": "614807f8-b87f-4a1f-85f5-3b0de0a963e4",
+      "comment": "",
+      "command": "echo",
+      "target": "${pizzaName}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5424ff00-f040-4ffc-8c76-e52e3cdcccaa",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//label[normalize-space()='Max Calories per Slice']/../input",
+      "targets": [],
+      "value": "600"
+    }, {
+      "id": "92a16a8d-0ec5-492f-86b6-197252cfdd9e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//select/option[normalize-space()='Knife']",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "5e193e3e-f908-41f7-b534-93f4a514b7d6",
+      "comment": "",
+      "command": "addSelection",
+      "target": "css=select",
+      "targets": [],
+      "value": "label=Knife"
+    }, {
+      "id": "d3964ae4-a823-4ebd-b530-6e94442fb8ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=default-checkbox",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49e242c3-1b0b-40d7-b812-45af86aa8670",
+      "comment": "",
+      "command": "type",
+      "target": "css=input#pizza-name",
+      "targets": [],
+      "value": "${pizzaName}"
+    }, {
+      "id": "ea915b83-61a4-447b-99aa-2e2adfd72892",
+      "comment": "",
+      "command": "assertValue",
+      "target": "xpath=//label[normalize-space()='Max Calories per Slice']/../input",
+      "targets": [],
+      "value": "600"
+    }, {
+      "id": "353a2e5f-9f81-4509-955f-82d3855d0c28",
+      "comment": "",
+      "command": "assertSelectedLabel",
+      "target": "css=select",
+      "targets": [],
+      "value": "Knife"
+    }, {
+      "id": "752892bb-20d1-4281-be56-eaf3e21cac72",
+      "comment": "",
+      "command": "assertChecked",
+      "target": "id=default-checkbox",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a1e1224-ffb9-41b6-a0c0-fc4b4d0b058e",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=input#pizza-name",
+      "targets": [],
+      "value": "${pizzaName}"
+    }, {
+      "id": "d0dd163e-588c-4b75-a683-42274f74884a",
+      "comment": "",
+      "command": "click",
+      "target": "name=pizza-please",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "902d08de-2b53-4241-a2f3-0cec423d64e8",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//p[starts-with(., 'Name:')]",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "2af8b14b-5fcf-4e38-bb17-7d292400b225",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//p[starts-with(., 'Name:')]",
+      "targets": [],
+      "value": "Name: ${pizzaName}"
+    }, {
+      "id": "e89fa5e0-91e6-49a4-85c7-485ddadff64e",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "xpath=//p[starts-with(., 'Tool:')]",
+      "targets": [],
+      "value": "Tool: Knife"
+    }, {
+      "id": "a0fe3249-e6dc-483c-9e7c-2702101a581c",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//p[starts-with(., 'Calories per slice:')]",
+      "targets": [],
+      "value": "calories"
+    }, {
+      "id": "ac82a724-cf9c-4a04-aa02-e86be3bf51ed",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseInt(${calories}.split(':')[1]) <= 600;",
+      "targets": [],
+      "value": "caloriesOk"
+    }, {
+      "id": "8b63ccd0-24f7-4e97-ad2b-172aef141338",
+      "comment": "",
+      "command": "assert",
+      "target": "caloriesOk",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "1075e0fb-13dc-400d-a805-08008a38cb09",
+      "comment": "",
+      "command": "click",
+      "target": "name=rate-5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c732ddef-a445-4543-acea-2409180b3712",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=rate-result",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "44b81db4-eee0-49d0-a290-d33de3cbf60d",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=rate-result",
+      "targets": [],
+      "value": "Please log in first."
+    }]
+  }],
+  "suites": [{
+    "id": "970013c7-b94f-4565-a43a-6160f9d2b236",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4a988b14-d68b-45bc-b0ab-94139963ab1a", "76a6daa6-ac96-4723-bdf6-c17f6a8c973d"]
+  }],
+  "urls": ["https://www.selenium.dev/", "https://quickpizza.grafana.com/"],
+  "plugins": []
+}
