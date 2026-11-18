@@ -7,6 +7,7 @@ module.exports = defineConfig({
 
   // retry each query and check for up to 10 seconds
   defaultCommandTimeout: 10000,
+  video: true,
 
   e2e: {
     setupNodeEvents(on, config) {
