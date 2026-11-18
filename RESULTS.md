@@ -1,7 +1,7 @@
 # UI lab results
 Tool parts that I chose:
-- 
-- 
+- Part 1: Selenium IDE
+- Part 4 : Cypress
 
 ## Part 0
 - Step 0.1, Chrome version:148.0.7778.168
@@ -26,27 +26,15 @@ Tool parts that I chose:
 - Firefox version and Node.js version: Firefox 160.0, Node.js 26.3.0, npm 11.16.0
 - Step 1.4, the line of the failed check and the line Tests: `Actual value 'Received!' did not match 'Received'`; `Tests: 1 failed, 1 total`
 - Step 1.5, target chosen for Submit, and why the recorded one was fragile: `xpath=//button[@type='submit']`; the recorded `css=.btn` was fragile because other elements may share the same class.
+- Step 1.6, commands changed, added or deleted after recording: Changed the recorded commands to use the locators and waits from the lab; added the automatic pizza-name script and echo, field checks, answer checks and the login-required check; deleted unnecessary recorder-generated commands.
 - Step 1.6, the pizza names of run 1 and run 2, from the lines info: echo: Lab Pizza 20261115-235136; Lab Pizza 20261115-235212
+- Step 1.6, the line Tests: of both runs: Run 1 — `Tests: 2 passed, 2 total`; Run 2 — `Tests: 2 passed, 2 total`
 - Step 1.7, one line of QP01customerTest.java that needs rewriting, and why: The line that types "600" into Max Calories per Slice needs a clear() before sendKeys(), because the page already contains 1000 and sendKeys("600") would produce 1000600.
-## Part 2: Selenium WebDriver in Java
-
-- Step 2.4, the failure line for the wrong title:
-- Step 2.15, QP01Test run 1, result and time:
-- Step 2.15, QP01Test run 2, result and time:
-- Step 2.20, full run 1, time and number of tests:
-- Step 2.20, full run 2, time and number of tests:
-
-## Part 3: Robot Framework
-
-- robot --version:
-- Step 3.2, failure message for the wrong title:
-- Step 3.8, run 1, result, elapsed time and pizza name:
-- Step 3.8, run 2, result, elapsed time and pizza name:
 
 ## Part 4: Cypress
 
-- node --version, npm --version and npx cypress version:
-- Step 4.3, failure message for the wrong title:
+- node --version, npm --version and npx cypress version: Node.js 26.3.0, npm 11.16.0, Cypress 16.2.1
+- Step 4.3, failure message for the wrong title: `Timed out retrying after 10000ms`; expected `Web Form` but actual was `Web form`.
 - Step 4.6, tool and calories in the answer of POST /api/pizza:
 - Step 4.7, the line of the admin list that shows your pizza:
 - Step 4.8, run 1, result, duration and pizza name:
